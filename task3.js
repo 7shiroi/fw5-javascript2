@@ -7,7 +7,7 @@ function SeleksiNilai(nilaiAwal, nilaiAkhir, dataArray) {
           res.push(item);
         }
       });
-      console.log(res.sort((a, b) => a - b));
+      console.log(res.sort((a, b) => a - b)); //menambahkan fungsi dalam sort agar sorting dilakukan berdasarkan angka, bukan ascii
     } else {
       console.log("Jumlah angka dalam dataArray harus lebih dari 5");
     }
