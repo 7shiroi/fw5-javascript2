@@ -1,12 +1,10 @@
 function SeleksiNilai(nilaiAwal, nilaiAkhir, dataArray) {
   if (nilaiAwal < nilaiAkhir) {
     if (dataArray.length >= 5) {
-      let res = [];
-      dataArray.forEach((item) => {
-        if (item >= nilaiAwal && item <= nilaiAkhir) {
-          res.push(item);
-        }
-      });
+      const res = dataArray.filter(
+        (value) => value >= nilaiAwal && value <= nilaiAkhir
+      );
+
       console.log(res.sort((a, b) => a - b)); //menambahkan fungsi dalam sort agar sorting dilakukan berdasarkan angka, bukan ascii || (a-b) untuk asc, (b-a) desc
     } else {
       console.log("Jumlah angka dalam dataArray harus lebih dari 5");
