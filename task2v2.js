@@ -24,7 +24,9 @@ function showResult(names) {
 }
 
 function searchName(filterChar, outputLimit, cb) {
-  res = name.filter((value) => value.includes(filterChar));
+  res = name.filter((value) =>
+    value.toLowerCase().includes(filterChar.toLowerCase())
+  );
 
   if (res.length > outputLimit) {
     res = res.slice(0, outputLimit);
@@ -34,3 +36,5 @@ function searchName(filterChar, outputLimit, cb) {
 }
 
 searchName("an", 3, showResult);
+searchName("ab", 3, showResult);
+searchName("an", 2, showResult);

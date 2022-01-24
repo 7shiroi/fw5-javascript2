@@ -25,7 +25,7 @@ function showResult(names) {
 
 function searchName(matcher, outputLimit, cb) {
   name.forEach((item) => {
-    if (item.match(matcher)) {
+    if (item.toLowerCase().match(matcher.toLowerCase())) {
       res.push(item);
     }
   });
